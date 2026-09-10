@@ -38,6 +38,11 @@ body {
 	color: #000
 }
 
+.nav a:focus-visible { /* focus visible lors de la navigation clavier tab */
+	outline: 3px solid #1C6474;
+	outline-offset: 3px;
+}
+
 .social-link img {
 	width: 20px;
 }
@@ -86,8 +91,11 @@ body {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	line-height: 1.2;
+	margin-bottom: 10px;
 }
-#about-me p {
+
+#about-me p:not(.about-me__introduction) {
 	width: 80%;
 	font-size: 14px;
 }
@@ -147,13 +155,15 @@ body {
 	margin: auto;
 	padding-block: 3em;
 }
+
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
 	font-size: 30px;
 	font-weight: 300;
-
+	line-height: 1.2;
 }
+
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
@@ -244,9 +254,24 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
+
+form input:focus-visible, /* focus visible lors de la navigation clavier tab */
+form textarea:focus-visible {
+	outline: 3px solid #1C6474;
+	outline-offset: 2px;
+}
+
 input[type="submit"] {
 	background-color: #BEB45A;
-	padding: .5em 1em
+	color:#000;
+	padding: .5em 1em;
+	border: 1px solid #000;
+}
+
+button:focus-visible, /* focus visible lors de la navigation clavier tab */
+input[type="submit"]:focus-visible {
+	outline: 3px solid #1C6474;
+	outline-offset: 2px;
 }
 
 @media all and (max-width: 1180px) {
